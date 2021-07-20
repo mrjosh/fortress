@@ -155,7 +155,7 @@ func getGithubPipelines(cfg *GitConfig) ([]*PipelineRow, error) {
 	for index, pipeline := range workflows.WorkflowRuns {
 
 		status := pipeline.GetConclusion()
-		if pipeline.Conclusion == nil {
+		if status == "" {
 			status = pipeline.GetStatus()
 		}
 
