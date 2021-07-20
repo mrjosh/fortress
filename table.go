@@ -87,7 +87,17 @@ type PipelineDetails struct {
 
 func (p *PipelineRow) initTable() {
 
+	pterm.Debug.Prefix = pterm.Prefix{
+		Text:  "Unknown",
+		Style: pterm.NewStyle(pterm.FgDarkGray),
+	}
+
 	pterm.Info.Prefix = pterm.Prefix{
+		Text:  "RUNNING",
+		Style: pterm.NewStyle(pterm.FgBlue),
+	}
+
+	pterm.Warning.Prefix = pterm.Prefix{
 		Text:  "CANCELLED",
 		Style: pterm.NewStyle(pterm.FgGray),
 	}
@@ -113,15 +123,16 @@ func (p *PipelineRow) GetTableRowStrings() []string {
 		commitID  = []rune(p.CommitID)
 	)
 
-	if p.Status == PipelineStatusCancelled || p.Status == PipelineStatusCanceled {
+	switch p.Status {
+	case PipelineStatusUnknown:
+		pipStatus = pterm.Debug.Sprint()
+	case PipelineStatusInProgress:
 		pipStatus = pterm.Info.Sprint()
-	}
-
-	if p.Status == PipelineStatusCompleted || p.Status == PipelineStatusSuccess {
+	case PipelineStatusCanceled, PipelineStatusCancelled:
+		pipStatus = pterm.Warning.Sprint()
+	case PipelineStatusSuccess, PipelineStatusCompleted:
 		pipStatus = pterm.Success.Sprint()
-	}
-
-	if p.Status == PipelineStatusFailed {
+	case PipelineStatusFailed:
 		pipStatus = pterm.Error.Sprint()
 	}
 
