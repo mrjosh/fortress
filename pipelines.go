@@ -153,6 +153,12 @@ func getGithubPipelines(cfg *GitConfig) ([]*PipelineRow, error) {
 	rows := make([]*PipelineRow, 0)
 
 	for index, pipeline := range workflows.WorkflowRuns {
+
+		status := pipeline.GetConclusion()
+		if pipeline.Conclusion == nil {
+			status = pipeline.GetStatus()
+		}
+
 		rows = append(rows, &PipelineRow{
 			Index: index,
 			PipelineDetails: &PipelineDetails{
@@ -160,7 +166,7 @@ func getGithubPipelines(cfg *GitConfig) ([]*PipelineRow, error) {
 				Branch:   pipeline.GetHeadBranch(),
 				User:     pipeline.Repository.Owner.GetLogin(),
 				CommitID: pipeline.HeadCommit.GetID(),
-				Status:   getGithubPipelineStatus(pipeline.GetConclusion()),
+				Status:   getGithubPipelineStatus(status),
 				Duration: 0,
 			},
 		})
