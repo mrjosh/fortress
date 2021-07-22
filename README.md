@@ -17,6 +17,9 @@
 * Github and Gitlab support
 * Built with Golang
 
+## Screen Shots
+<img src="/shots/screen-shot-1.png" />
+
 ## Contributing
 Thank you for considering contributing to the Fortress project!
 
