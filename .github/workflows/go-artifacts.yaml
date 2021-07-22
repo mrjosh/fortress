@@ -1,4 +1,4 @@
-name: go-artifacts
+name: Release
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - v*
 
 jobs:
+
   goartifacts:
     name: artifacts
     strategy:
@@ -13,6 +14,9 @@ jobs:
         go-version: [1.16.x]
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
+    outputs:
+      version: ${{ steps.build.outputs.version }}
+      release: ${{ steps.build.outputs.release }}
     steps:
     - name: Install Go
       uses: actions/setup-go@v2
@@ -32,15 +36,83 @@ jobs:
       with:
         name: fortress_darwin_amd64
         path: ./dist/fortress_darwin_amd64
+        retention-days: 1
 
     - name: 'Upload linux artifact'
       uses: actions/upload-artifact@v2
       with:
         name: fortress_linux_amd64
         path: ./dist/fortress_linux_amd64
+        retention-days: 1
 
     - name: 'Upload windows artifact'
       uses: actions/upload-artifact@v2
       with:
         name: fortress_windows_amd64
-        path: ./dist/fortress_windows_amd64
+        path: ./dist/fortress_windows_amd64.exe
+        retention-days: 1
+
+  publish:
+    needs: [goartifacts]
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+    steps:
+
+      - uses: actions/download-artifact@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Linux64 SHA256 checksums
+        run: |
+          sha256sum fortress_linux_amd64 > fortress_linux_amd64.sha256sum
+          echo "SHA_LINUX_64=$(cat fortress_linux_amd64.sha256sum)" >> $GITHUB_ENV
+
+      - name: Generate macOS SHA256 checksums
+        run: |
+          sha256sum fortress_darwin_amd64 > fortress_darwin_amd64.sha256sum
+          echo "SHA_MACOS=$(cat fortress_darwin_amd64.sha256sum)" >> $GITHUB_ENV
+
+      - name: Generate windows SHA256 checksums
+        run: |
+          sha256sum fortress_windows_amd64.exe > fortress_windows_amd64.sha256sum
+          echo "SHA_WIN_64=$(cat fortress_windows_amd64.sha256sum)" >> $GITHUB_ENV
+
+      - if: env.TAG_NAME == 'nightly'
+        run: echo 'SUBJECT=Fortress development (prerelease) build' >> $GITHUB_ENV
+
+      - if: env.TAG_NAME != 'nightly'
+        run: echo 'SUBJECT=Fortress release build' >> $GITHUB_ENV
+
+      - uses: meeDamian/github-release@2.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ env.TAG_NAME }}
+          name: ${{ needs.linux.outputs.release }}
+          commitish: ${{ github.sha }}
+          gzip: false
+          files: |
+            fortress_darwin_amd64:./fortress_darwin_amd64
+            fortress_darwin_amd64.sha256sum:./fortress_darwin_amd64.sha256sum
+            fortress_linux_amd64:./fortress_linux_amd64
+            fortress_linux_amd64.sha256sum:./fortress_linux_amd64.sha256sum
+            fortress_windows_amd64.exe:./fortress_windows_amd64.exe
+            fortress_windows_amd64.exe.sha256sum:./fortress_windows_amd64.sha256sum
+          body: |
+            ${{ env.SUBJECT }}
+            ```
+            ${{ needs.linux.outputs.version }}```
+
+            1. Download **fortress_darwin_amd64**
+            2. Run `./fortress_darwin_amd64`
+
+            ### Linux (x64)
+            1. Download **fortress_linux_amd64**
+            2. Run `./fortress_linux_amd64`
+
+            ## SHA256 Checksums
+            ```
+            ${{ env.SHA_LINUX_64 }}
+            ${{ env.SHA_MACOS }}
+            ${{ env.SHA_WIN_64 }}
+            ```
