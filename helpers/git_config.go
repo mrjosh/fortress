@@ -16,9 +16,9 @@ const (
 
 type GitConfig struct {
 	BaseURL     string
-	AccessToken string
 	Branch      string
 	Status      string
+	AccessToken string
 	Repository  string
 	Service     GitConfigService
 }

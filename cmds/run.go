@@ -44,8 +44,12 @@ func newJobsCommand() *cobra.Command {
 			}
 
 			gitConfig.AccessToken = cFlags.AccessToken
-			gitConfig.Branch = cFlags.Branch
-			gitConfig.Status = cFlags.Status
+			if cFlags.Branch != "" {
+				gitConfig.Branch = cFlags.Branch
+			}
+			if cFlags.Status != "" {
+				gitConfig.Status = cFlags.Status
+			}
 
 			if cFlags.AllBranches {
 				gitConfig.Branch = helpers.AllBranchesOption
