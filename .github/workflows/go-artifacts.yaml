@@ -65,17 +65,17 @@ jobs:
 
       - name: Generate Linux64 SHA256 checksums
         run: |
-          sha256sum fortress_linux_amd64 > fortress_linux_amd64.sha256sum
+          sha256sum fortress_linux_amd64/fortress_linux_amd64 > fortress_linux_amd64.sha256sum
           echo "SHA_LINUX_64=$(cat fortress_linux_amd64.sha256sum)" >> $GITHUB_ENV
 
       - name: Generate macOS SHA256 checksums
         run: |
-          sha256sum fortress_darwin_amd64 > fortress_darwin_amd64.sha256sum
+          sha256sum fortress_darwin_amd64/fortress_darwin_amd64 > fortress_darwin_amd64.sha256sum
           echo "SHA_MACOS=$(cat fortress_darwin_amd64.sha256sum)" >> $GITHUB_ENV
 
       - name: Generate windows SHA256 checksums
         run: |
-          sha256sum fortress_windows_amd64.exe > fortress_windows_amd64.sha256sum
+          sha256sum fortress_windows_amd64/fortress_windows_amd64.exe > fortress_windows_amd64.sha256sum
           echo "SHA_WIN_64=$(cat fortress_windows_amd64.sha256sum)" >> $GITHUB_ENV
 
       - if: env.TAG_NAME == 'nightly'
@@ -92,11 +92,11 @@ jobs:
           commitish: ${{ github.sha }}
           gzip: false
           files: |
-            fortress_darwin_amd64:./fortress_darwin_amd64
+            fortress_darwin_amd64:./fortress_darwin_amd64/fortress_darwin_amd64
             fortress_darwin_amd64.sha256sum:./fortress_darwin_amd64.sha256sum
-            fortress_linux_amd64:./fortress_linux_amd64
+            fortress_linux_amd64:./fortress_linux_amd64/fortress_linux_amd64
             fortress_linux_amd64.sha256sum:./fortress_linux_amd64.sha256sum
-            fortress_windows_amd64.exe:./fortress_windows_amd64.exe
+            fortress_windows_amd64.exe:./fortress_windows_amd64/fortress_windows_amd64.exe
             fortress_windows_amd64.exe.sha256sum:./fortress_windows_amd64.sha256sum
           body: |
             ${{ env.SUBJECT }}
