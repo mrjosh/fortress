@@ -64,7 +64,7 @@ func newJobsCommand() *cobra.Command {
 			s := spinner.New(spinner.CharSets[14], time.Millisecond*100)
 			s.Start()
 			s.Prefix = fmt.Sprintf(
-				"[%s] Getpping repository pipelines [%s]",
+				"[%s] Getting repository pipelines [%s]",
 				color.CyanString(gitConfig.BaseURL),
 				projectWithBranchName,
 			)
