@@ -18,7 +18,7 @@
 * Built with Golang
 
 ## Contributing
-Thank you for considering contributing to the HomePi project!
+Thank you for considering contributing to the Fortress project!
 
 ## License
 The Fortress project is open-source software licensed under the MIT license.
