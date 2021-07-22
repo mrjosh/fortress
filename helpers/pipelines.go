@@ -1,4 +1,4 @@
-package main
+package helpers
 
 import (
 	"context"
@@ -10,6 +10,10 @@ import (
 
 	github "github.com/google/go-github/v37/github"
 	gitlab "github.com/xanzy/go-gitlab"
+)
+
+const (
+	AllBranchesOption = "*all-branches*"
 )
 
 func getGithubPipelineStatus(status string) PipelineStatus {
@@ -71,7 +75,7 @@ func getGitlabPipelines(cfg *GitConfig) ([]*PipelineRow, error) {
 	}
 
 	opt := &gitlab.ListProjectPipelinesOptions{}
-	if cfg.Branch != "" && cfg.Branch != AllBranchedOption {
+	if cfg.Branch != "" && cfg.Branch != AllBranchesOption {
 		opt.Ref = gitlab.String(cfg.Branch)
 	}
 
@@ -129,7 +133,7 @@ func getGitlabPipelines(cfg *GitConfig) ([]*PipelineRow, error) {
 func getGithubPipelines(cfg *GitConfig) ([]*PipelineRow, error) {
 
 	var opt *github.ListWorkflowRunsOptions
-	if cfg.Branch != "" && cfg.Branch != AllBranchedOption {
+	if cfg.Branch != "" && cfg.Branch != AllBranchesOption {
 		opt = &github.ListWorkflowRunsOptions{}
 		opt.Branch = cfg.Branch
 	}

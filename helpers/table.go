@@ -1,4 +1,4 @@
-package main
+package helpers
 
 import (
 	"fmt"
@@ -87,6 +87,11 @@ type PipelineDetails struct {
 
 func (p *PipelineRow) initTable() {
 
+	pterm.Description.Prefix = pterm.Prefix{
+		Text:  "PENDING",
+		Style: pterm.NewStyle(pterm.FgYellow),
+	}
+
 	pterm.Debug.Prefix = pterm.Prefix{
 		Text:  "Unknown",
 		Style: pterm.NewStyle(pterm.FgDarkGray),
@@ -126,7 +131,7 @@ func (p *PipelineRow) GetTableRowStrings() []string {
 	switch p.Status {
 	case PipelineStatusUnknown:
 		pipStatus = pterm.Debug.Sprint()
-	case PipelineStatusInProgress:
+	case PipelineStatusInProgress, PipelineStatusRunning:
 		pipStatus = pterm.Info.Sprint()
 	case PipelineStatusCanceled, PipelineStatusCancelled:
 		pipStatus = pterm.Warning.Sprint()
@@ -134,6 +139,8 @@ func (p *PipelineRow) GetTableRowStrings() []string {
 		pipStatus = pterm.Success.Sprint()
 	case PipelineStatusFailed:
 		pipStatus = pterm.Error.Sprint()
+	case PipelineStatusPending, PipelineStatusCreated:
+		pipStatus = pterm.Description.Sprint()
 	}
 
 	var (
