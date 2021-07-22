@@ -1,0 +1,46 @@
+name: go-artifacts
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  goartifacts:
+    name: artifacts
+    strategy:
+      matrix:
+        go-version: [1.16.x]
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Install Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: ${{ matrix.go-version }}
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install go dependencies
+      run: go mod tidy
+
+    - name: Build artifacts
+      run: make build-artifacts
+
+    - name: 'Upload macOS artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: fortress_darwin_amd64
+        path: ./dist/fortress_darwin_amd64
+
+    - name: 'Upload linux artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: fortress_linux_amd64
+        path: ./dist/fortress_linux_amd64
+
+    - name: 'Upload windows artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: fortress_windows_amd64
+        path: ./dist/fortress_windows_amd64

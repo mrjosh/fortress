@@ -6,6 +6,7 @@ require (
 	github.com/briandowns/spinner v1.16.0
 	github.com/fatih/color v1.12.0
 	github.com/google/go-github/v37 v37.0.0
+	github.com/mitchellh/gox v1.0.1 // indirect
 	github.com/pterm/pterm v0.12.29
 	github.com/spf13/cobra v1.2.1
 	github.com/stretchr/testify v1.7.0
