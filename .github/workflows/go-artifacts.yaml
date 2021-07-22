@@ -8,6 +8,8 @@ on:
         required: false
         default: nightly
   push:
+    branches:
+      - nightly
     tags:
       - v*
 
@@ -106,6 +108,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ env.TAG_NAME }}
           name: ${{ needs.linux.outputs.release }}
+          prerelease: ${{ env.TAG_NAME == 'nightly' }}
           commitish: ${{ github.sha }}
           gzip: false
           allow_override: ${{ env.TAG_NAME == 'nightly' }}
