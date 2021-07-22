@@ -63,6 +63,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - if: github.event_name == 'workflow_dispatch'
+        run: echo "TAG_NAME=${{ github.event.inputs.tag_name }}" >> $GITHUB_ENV
+
+      - if: github.event_name == 'schedule'
+        run: echo 'TAG_NAME=nightly' >> $GITHUB_ENV
+
+      - if: github.event_name == 'push'
+        run: |
+          TAG_NAME=${{ github.ref }}
+          echo "TAG_NAME=${TAG_NAME#refs/tags/}" >> $GITHUB_ENV
+
       - name: Generate Linux64 SHA256 checksums
         run: |
           sha256sum fortress_linux_amd64/fortress_linux_amd64 > fortress_linux_amd64.sha256sum
@@ -91,6 +102,7 @@ jobs:
           name: ${{ needs.linux.outputs.release }}
           commitish: ${{ github.sha }}
           gzip: false
+          allow_override: ${{ env.TAG_NAME == 'nightly' }}
           files: |
             fortress_darwin_amd64:./fortress_darwin_amd64/fortress_darwin_amd64
             fortress_darwin_amd64.sha256sum:./fortress_darwin_amd64.sha256sum
