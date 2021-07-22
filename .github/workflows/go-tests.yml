@@ -25,5 +25,5 @@ jobs:
       uses: actions/checkout@v2
     - name: Install go dependencies
       run: go mod tidy
-    - name: Run Tests
+    - name: Run Go Tests
       run: make test
