@@ -31,7 +31,7 @@ export LINTERCMD=run --no-config -v \
 	--enable=gosimple
 
 all:
-	$(BUILD) ./...
+	@$(BUILD) ./...
 
 # lint runs vet plus a number of other checkers, it is more comprehensive, but louder
 lint:
@@ -45,9 +45,11 @@ lint:
 
 # for ci jobs, runs lint against the changed packages in the commit
 ci-lint:
-	$(LINTER) $(LINTERCMD) --deadline 10m --new-from-rev=HEAD~ ./...
+	@$(LINTER) $(LINTERCMD) --deadline 10m --new-from-rev=HEAD~ ./...
 
+test:
+	@$(GO) test -v -race ./...
 
 # Check if golangci-lint not exists, then install it
 install-metalinter:
-	$(GO) get -v github.com/golangci/golangci-lint/cmd/golangci-lint@v1.41.1
+	@$(GO) get -v github.com/golangci/golangci-lint/cmd/golangci-lint@v1.41.1
