@@ -1,3 +1,4 @@
 vendor
 bin
 dist
+.DS_Store
