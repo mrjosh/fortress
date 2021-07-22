@@ -111,7 +111,7 @@ jobs:
           prerelease: ${{ env.TAG_NAME == 'nightly' }}
           commitish: ${{ github.sha }}
           gzip: false
-          allow_override: ${{ env.TAG_NAME == 'nightly' }}
+          allow_override: true
           files: |
             fortress_darwin_amd64:./fortress_darwin_amd64/fortress_darwin_amd64
             fortress_darwin_amd64.sha256sum:./fortress_darwin_amd64.sha256sum
