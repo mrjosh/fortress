@@ -139,7 +139,7 @@ func (p *PipelineRow) GetTableRowStrings() []string {
 		pipStatus = pterm.Success.Sprint()
 	case PipelineStatusFailed:
 		pipStatus = pterm.Error.Sprint()
-	case PipelineStatusPending, PipelineStatusCreated:
+	case PipelineStatusPending, PipelineStatusCreated, PipelineStatusQueued:
 		pipStatus = pterm.Description.Sprint()
 	}
 
