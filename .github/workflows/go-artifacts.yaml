@@ -6,10 +6,10 @@ on:
       tag_name:
         description: 'Tag name for release'
         required: false
-        default: nightly
+        default: develop
   push:
     branches:
-      - nightly
+      - develop
     tags:
       - v*
 
@@ -79,12 +79,12 @@ jobs:
         run: echo "TAG_NAME=${{ github.event.inputs.tag_name }}" >> $GITHUB_ENV
 
       - if: github.event_name == 'schedule'
-        run: echo 'TAG_NAME=nightly' >> $GITHUB_ENV
+        run: echo 'TAG_NAME=develop' >> $GITHUB_ENV
 
       - if: github.event_name == 'push'
         run: |
           TAG_NAME=${{ github.ref }}
-          echo "TAG_NAME=${TAG_NAME#refs/tags/}" >> $GITHUB_ENV
+          echo "TAG_NAME=${TAG_NAME#refs/*/}" >> $GITHUB_ENV
 
       - name: Generate Linux64 SHA256 checksums
         run: |
@@ -101,10 +101,10 @@ jobs:
           sha256sum fortress_windows_amd64/fortress_windows_amd64.exe > fortress_windows_amd64.sha256sum
           echo "SHA_WIN_64=$(cat fortress_windows_amd64.sha256sum)" >> $GITHUB_ENV
 
-      - if: env.TAG_NAME == 'nightly'
+      - if: env.TAG_NAME == 'develop'
         run: echo 'SUBJECT=Fortress development (prerelease) build' >> $GITHUB_ENV
 
-      - if: env.TAG_NAME != 'nightly'
+      - if: env.TAG_NAME != 'develop'
         run: echo 'SUBJECT=Fortress release build' >> $GITHUB_ENV
 
       - uses: meeDamian/github-release@2.0
@@ -112,7 +112,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ env.TAG_NAME }}
           name: ${{ needs.goartifacts.outputs.release }}
-          prerelease: ${{ env.TAG_NAME == 'nightly' }}
+          prerelease: ${{ env.TAG_NAME == 'develop' }}
           commitish: ${{ github.sha }}
           gzip: false
           allow_override: true
@@ -126,7 +126,8 @@ jobs:
           body: |
             ${{ env.SUBJECT }}
             ```
-            ${{ needs.goartifacts.outputs.version }}```
+            ${{ needs.goartifacts.outputs.version }}
+            ```
 
             ### macOS (x64)
             1. Download **fortress_darwin_amd64**
