@@ -23,9 +23,9 @@ type GitConfig struct {
 	Service     GitConfigService
 }
 
-func GetLocalGitConfig() (gitConfig *GitConfig, err error) {
+func GetLocalGitConfig() (*GitConfig, error) {
 
-	gitConfig = new(GitConfig)
+	gitConfig := new(GitConfig)
 
 	gitURLCmd := exec.Command("git", "remote", "get-url", "origin")
 	gitURLName, err := gitURLCmd.Output()
@@ -65,5 +65,5 @@ func GetLocalGitConfig() (gitConfig *GitConfig, err error) {
 		gitConfig.Service = GitConfigServiceGithub
 	}
 
-	return
+	return gitConfig, nil
 }
