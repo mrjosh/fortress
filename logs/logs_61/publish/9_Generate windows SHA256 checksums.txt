@@ -1,0 +1,9 @@
+2021-07-23T01:09:36.9238594Z ##[group]Run sha256sum fortress_windows_amd64/fortress_windows_amd64.exe > fortress_windows_amd64.sha256sum
+2021-07-23T01:09:36.9239810Z [36;1msha256sum fortress_windows_amd64/fortress_windows_amd64.exe > fortress_windows_amd64.sha256sum[0m
+2021-07-23T01:09:36.9240790Z [36;1mecho "SHA_WIN_64=$(cat fortress_windows_amd64.sha256sum)" >> $GITHUB_ENV[0m
+2021-07-23T01:09:36.9283713Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:09:36.9284152Z env:
+2021-07-23T01:09:36.9284568Z   TAG_NAME: develop
+2021-07-23T01:09:36.9285746Z   SHA_LINUX_64: 5ba5632612bfb3ca70f626fd172023462afbd8872ecf80bca79efc9569b2a8d6  fortress_linux_amd64/fortress_linux_amd64
+2021-07-23T01:09:36.9287535Z   SHA_MACOS: 646d9c5b9e73a4cd758f2d98f0b581b44991144e38102fc4e44b2380575cc7db  fortress_darwin_amd64/fortress_darwin_amd64
+2021-07-23T01:09:36.9288630Z ##[endgroup]

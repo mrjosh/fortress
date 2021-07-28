@@ -1,0 +1,32 @@
+2021-07-23T01:08:12.9716005Z Current runner version: '2.278.0'
+2021-07-23T01:08:12.9747149Z ##[group]Operating System
+2021-07-23T01:08:12.9748454Z Ubuntu
+2021-07-23T01:08:12.9748942Z 20.04.2
+2021-07-23T01:08:12.9749357Z LTS
+2021-07-23T01:08:12.9749857Z ##[endgroup]
+2021-07-23T01:08:12.9750399Z ##[group]Virtual Environment
+2021-07-23T01:08:12.9751383Z Environment: ubuntu-20.04
+2021-07-23T01:08:12.9752113Z Version: 20210718.1
+2021-07-23T01:08:12.9753161Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20210718.1/images/linux/Ubuntu2004-README.md
+2021-07-23T01:08:12.9754790Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20210718.1
+2021-07-23T01:08:12.9755974Z ##[endgroup]
+2021-07-23T01:08:12.9758105Z ##[group]GITHUB_TOKEN Permissions
+2021-07-23T01:08:12.9759461Z Actions: write
+2021-07-23T01:08:12.9760059Z Checks: write
+2021-07-23T01:08:12.9760638Z Contents: write
+2021-07-23T01:08:12.9761226Z Deployments: write
+2021-07-23T01:08:12.9761844Z Discussions: write
+2021-07-23T01:08:12.9762534Z Issues: write
+2021-07-23T01:08:12.9763104Z Metadata: read
+2021-07-23T01:08:12.9763819Z Packages: write
+2021-07-23T01:08:12.9764474Z PullRequests: write
+2021-07-23T01:08:12.9765136Z RepositoryProjects: write
+2021-07-23T01:08:12.9765865Z SecurityEvents: write
+2021-07-23T01:08:12.9766600Z Statuses: write
+2021-07-23T01:08:12.9767295Z ##[endgroup]
+2021-07-23T01:08:12.9770816Z Prepare workflow directory
+2021-07-23T01:08:13.0438754Z Prepare all required actions
+2021-07-23T01:08:13.0451613Z Getting action download info
+2021-07-23T01:08:13.4434066Z Download action repository 'actions/setup-go@v2'
+2021-07-23T01:08:15.5045912Z Download action repository 'actions/checkout@v2'
+2021-07-23T01:08:15.9027969Z Download action repository 'actions/upload-artifact@v2'

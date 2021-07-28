@@ -1,0 +1,13 @@
+2021-07-23T01:09:12.4527405Z ##[group]Run actions/upload-artifact@v2
+2021-07-23T01:09:12.4527994Z with:
+2021-07-23T01:09:12.4528447Z   name: fortress_linux_amd64
+2021-07-23T01:09:12.4529002Z   path: ./dist/fortress_linux_amd64
+2021-07-23T01:09:12.4529803Z   retention-days: 1
+2021-07-23T01:09:12.4530267Z   if-no-files-found: warn
+2021-07-23T01:09:12.4530654Z env:
+2021-07-23T01:09:12.4531106Z   GOROOT: /opt/hostedtoolcache/go/1.16.6/x64
+2021-07-23T01:09:12.4531752Z ##[endgroup]
+2021-07-23T01:09:12.5575752Z With the provided path, there will be 1 file uploaded
+2021-07-23T01:09:13.9812167Z Total size of all the files uploaded is 5441809 bytes
+2021-07-23T01:09:14.0394577Z Finished uploading artifact fortress_linux_amd64. Reported size is 5441809 bytes. There were 0 items that failed to upload
+2021-07-23T01:09:14.0397663Z Artifact fortress_linux_amd64 has been successfully uploaded!

@@ -1,0 +1,32 @@
+2021-07-23T01:08:20.3554459Z ##[group]Run make build-artifacts
+2021-07-23T01:08:20.3555089Z [36;1mmake build-artifacts[0m
+2021-07-23T01:08:20.3555722Z [36;1mprintf '::set-output name=version::%s\n' "$(./dist/fortress_linux_amd64 version | head -n 3)"[0m
+2021-07-23T01:08:20.3556503Z [36;1mprintf '::set-output name=release::%s\n' "$(./dist/fortress_linux_amd64 version | head -n 1)"[0m
+2021-07-23T01:08:20.3596320Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:08:20.3596674Z env:
+2021-07-23T01:08:20.3597086Z   GOROOT: /opt/hostedtoolcache/go/1.16.6/x64
+2021-07-23T01:08:20.3597498Z ##[endgroup]
+2021-07-23T01:08:20.3735934Z make[1]: Entering directory '/home/runner/work/fortress/fortress'
+2021-07-23T01:08:20.4903168Z go: downloading github.com/mitchellh/gox v1.0.1
+2021-07-23T01:08:20.7511252Z go: downloading github.com/hashicorp/go-version v1.0.0
+2021-07-23T01:08:20.7522151Z go: downloading github.com/mitchellh/iochan v1.0.0
+2021-07-23T01:08:21.1474591Z github.com/mitchellh/iochan
+2021-07-23T01:08:21.1547040Z github.com/hashicorp/go-version
+2021-07-23T01:08:21.2165726Z github.com/mitchellh/gox
+2021-07-23T01:08:21.6385355Z go get: upgraded github.com/mitchellh/gox v0.4.0 => v1.0.1
+2021-07-23T01:08:22.2177649Z Number of parallel builds: 1
+2021-07-23T01:08:22.2179000Z 
+2021-07-23T01:08:22.2180611Z -->     linux/amd64: github.com/mrjosh/fortress
+2021-07-23T01:08:29.8788169Z make[1]: Leaving directory '/home/runner/work/fortress/fortress'
+2021-07-23T01:08:29.8808476Z make[1]: Entering directory '/home/runner/work/fortress/fortress'
+2021-07-23T01:08:31.0543057Z Number of parallel builds: 1
+2021-07-23T01:08:31.0543743Z 
+2021-07-23T01:08:31.0545226Z -->   windows/amd64: github.com/mrjosh/fortress
+2021-07-23T01:08:51.6023702Z make[1]: Leaving directory '/home/runner/work/fortress/fortress'
+2021-07-23T01:08:51.6042853Z make[1]: Entering directory '/home/runner/work/fortress/fortress'
+2021-07-23T01:08:52.3140665Z Number of parallel builds: 1
+2021-07-23T01:08:52.3142287Z 
+2021-07-23T01:08:52.3144040Z -->    darwin/amd64: github.com/mrjosh/fortress
+2021-07-23T01:09:10.9898534Z make[1]: Leaving directory '/home/runner/work/fortress/fortress'
+2021-07-23T01:09:10.9990416Z Build type: Release
+2021-07-23T01:09:10.9990927Z Go version: go1.16.6

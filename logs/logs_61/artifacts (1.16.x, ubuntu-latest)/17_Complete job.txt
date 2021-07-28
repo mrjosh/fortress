@@ -1,0 +1,4 @@
+2021-07-23T01:09:15.7092284Z Evaluate and set job outputs
+2021-07-23T01:09:15.7111346Z Set output 'version'
+2021-07-23T01:09:15.7114243Z Set output 'release'
+2021-07-23T01:09:15.7115345Z Cleaning up orphan processes

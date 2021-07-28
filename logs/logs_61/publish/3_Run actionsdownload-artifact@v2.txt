@@ -1,0 +1,15 @@
+2021-07-23T01:09:34.0745700Z ##[group]Run actions/download-artifact@v2
+2021-07-23T01:09:34.0746667Z with:
+2021-07-23T01:09:34.0747468Z env:
+2021-07-23T01:09:34.0749479Z   GITHUB_TOKEN: ***
+2021-07-23T01:09:34.0750038Z ##[endgroup]
+2021-07-23T01:09:34.2669205Z No artifact name specified, downloading all artifacts
+2021-07-23T01:09:34.2670353Z Creating an extra directory for each artifact that is being downloaded
+2021-07-23T01:09:34.5509922Z Total number of files that will be downloaded: 1
+2021-07-23T01:09:35.2586116Z Total number of files that will be downloaded: 1
+2021-07-23T01:09:35.9764470Z Total number of files that will be downloaded: 1
+2021-07-23T01:09:36.6658248Z There were 3 artifacts downloaded
+2021-07-23T01:09:36.6686091Z Artifact fortress_darwin_amd64 was downloaded to /home/runner/work/fortress/fortress/fortress_darwin_amd64
+2021-07-23T01:09:36.6687948Z Artifact fortress_linux_amd64 was downloaded to /home/runner/work/fortress/fortress/fortress_linux_amd64
+2021-07-23T01:09:36.6689466Z Artifact fortress_windows_amd64 was downloaded to /home/runner/work/fortress/fortress/fortress_windows_amd64
+2021-07-23T01:09:36.6694975Z Artifact download has finished successfully

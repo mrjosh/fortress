@@ -1,0 +1,13 @@
+2021-07-23T01:09:14.0574926Z ##[group]Run actions/upload-artifact@v2
+2021-07-23T01:09:14.0575492Z with:
+2021-07-23T01:09:14.0575934Z   name: fortress_windows_amd64
+2021-07-23T01:09:14.0576508Z   path: ./dist/fortress_windows_amd64.exe
+2021-07-23T01:09:14.0577049Z   retention-days: 1
+2021-07-23T01:09:14.0577580Z   if-no-files-found: warn
+2021-07-23T01:09:14.0578034Z env:
+2021-07-23T01:09:14.0578543Z   GOROOT: /opt/hostedtoolcache/go/1.16.6/x64
+2021-07-23T01:09:14.0579056Z ##[endgroup]
+2021-07-23T01:09:14.1281078Z With the provided path, there will be 1 file uploaded
+2021-07-23T01:09:15.4229109Z Total size of all the files uploaded is 5583370 bytes
+2021-07-23T01:09:15.4910849Z Finished uploading artifact fortress_windows_amd64. Reported size is 5583370 bytes. There were 0 items that failed to upload
+2021-07-23T01:09:15.4913868Z Artifact fortress_windows_amd64 has been successfully uploaded!

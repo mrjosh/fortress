@@ -1,0 +1,44 @@
+2021-07-23T01:08:17.7838210Z ##[group]Run go mod tidy
+2021-07-23T01:08:17.7838793Z [36;1mgo mod tidy[0m
+2021-07-23T01:08:17.7883590Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:08:17.7884084Z env:
+2021-07-23T01:08:17.7884590Z   GOROOT: /opt/hostedtoolcache/go/1.16.6/x64
+2021-07-23T01:08:17.7885134Z ##[endgroup]
+2021-07-23T01:08:18.8075831Z go: downloading github.com/briandowns/spinner v1.16.0
+2021-07-23T01:08:18.8111319Z go: downloading github.com/fatih/color v1.12.0
+2021-07-23T01:08:18.8691768Z go: downloading github.com/spf13/cobra v1.2.1
+2021-07-23T01:08:18.9274602Z go: downloading gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+2021-07-23T01:08:18.9585282Z go: downloading github.com/google/go-github/v37 v37.0.0
+2021-07-23T01:08:19.0038944Z go: downloading github.com/pterm/pterm v0.12.29
+2021-07-23T01:08:19.0669143Z go: downloading github.com/xanzy/go-gitlab v0.50.1
+2021-07-23T01:08:19.1241495Z go: downloading github.com/stretchr/testify v1.7.0
+2021-07-23T01:08:19.1879022Z go: downloading github.com/mattn/go-colorable v0.1.8
+2021-07-23T01:08:19.1886718Z go: downloading github.com/mattn/go-isatty v0.0.12
+2021-07-23T01:08:19.2340579Z go: downloading github.com/inconshreveable/mousetrap v1.0.0
+2021-07-23T01:08:19.2459698Z go: downloading github.com/spf13/pflag v1.0.5
+2021-07-23T01:08:19.2961043Z go: downloading gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127
+2021-07-23T01:08:19.3488004Z go: downloading github.com/atomicgo/cursor v0.0.1
+2021-07-23T01:08:19.3513192Z go: downloading github.com/gookit/color v1.4.2
+2021-07-23T01:08:19.3639237Z go: downloading github.com/mattn/go-runewidth v0.0.13
+2021-07-23T01:08:19.3724292Z go: downloading golang.org/x/term v0.0.0-20210615171337-6886f2dfbf5b
+2021-07-23T01:08:19.3795628Z go: downloading github.com/MarvinJWendt/testza v0.1.0
+2021-07-23T01:08:19.3997610Z go: downloading github.com/google/go-querystring v1.0.0
+2021-07-23T01:08:19.4001355Z go: downloading golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
+2021-07-23T01:08:19.4408169Z go: downloading github.com/google/go-cmp v0.5.6
+2021-07-23T01:08:19.4750384Z go: downloading github.com/hashicorp/go-cleanhttp v0.5.1
+2021-07-23T01:08:19.4903950Z go: downloading github.com/hashicorp/go-retryablehttp v0.6.8
+2021-07-23T01:08:19.5066419Z go: downloading golang.org/x/oauth2 v0.0.0-20210402161424-2e8d93401602
+2021-07-23T01:08:19.5518666Z go: downloading golang.org/x/time v0.0.0-20191024005414-555d28b269f0
+2021-07-23T01:08:19.5729730Z go: downloading github.com/davecgh/go-spew v1.1.1
+2021-07-23T01:08:19.5831829Z go: downloading github.com/pmezard/go-difflib v1.0.0
+2021-07-23T01:08:19.6022006Z go: downloading golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1
+2021-07-23T01:08:19.6095920Z go: downloading github.com/kr/pretty v0.1.0
+2021-07-23T01:08:19.6572125Z go: downloading github.com/xo/terminfo v0.0.0-20210125001918-ca9a967f8778
+2021-07-23T01:08:19.8037222Z go: downloading github.com/rivo/uniseg v0.2.0
+2021-07-23T01:08:19.8342178Z go: downloading github.com/hashicorp/go-hclog v0.9.2
+2021-07-23T01:08:19.8521119Z go: downloading github.com/kr/text v0.1.0
+2021-07-23T01:08:19.8773704Z go: downloading golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4
+2021-07-23T01:08:19.8775429Z go: downloading google.golang.org/appengine v1.6.7
+2021-07-23T01:08:19.9762545Z go: downloading github.com/golang/protobuf v1.5.2
+2021-07-23T01:08:20.0849427Z go: downloading google.golang.org/protobuf v1.26.0
+2021-07-23T01:08:20.3002092Z go: downloading golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1

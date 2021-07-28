@@ -1,0 +1,7 @@
+2021-07-23T01:09:36.7088601Z ##[group]Run sha256sum fortress_linux_amd64/fortress_linux_amd64 > fortress_linux_amd64.sha256sum
+2021-07-23T01:09:36.7089740Z [36;1msha256sum fortress_linux_amd64/fortress_linux_amd64 > fortress_linux_amd64.sha256sum[0m
+2021-07-23T01:09:36.7090653Z [36;1mecho "SHA_LINUX_64=$(cat fortress_linux_amd64.sha256sum)" >> $GITHUB_ENV[0m
+2021-07-23T01:09:36.7145024Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:09:36.7145499Z env:
+2021-07-23T01:09:36.7145904Z   TAG_NAME: develop
+2021-07-23T01:09:36.7146348Z ##[endgroup]

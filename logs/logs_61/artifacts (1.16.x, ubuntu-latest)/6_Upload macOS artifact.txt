@@ -1,0 +1,13 @@
+2021-07-23T01:09:11.0077434Z ##[group]Run actions/upload-artifact@v2
+2021-07-23T01:09:11.0077911Z with:
+2021-07-23T01:09:11.0078285Z   name: fortress_darwin_amd64
+2021-07-23T01:09:11.0078731Z   path: ./dist/fortress_darwin_amd64
+2021-07-23T01:09:11.0079184Z   retention-days: 1
+2021-07-23T01:09:11.0079636Z   if-no-files-found: warn
+2021-07-23T01:09:11.0080012Z env:
+2021-07-23T01:09:11.0080437Z   GOROOT: /opt/hostedtoolcache/go/1.16.6/x64
+2021-07-23T01:09:11.0080878Z ##[endgroup]
+2021-07-23T01:09:11.0751405Z With the provided path, there will be 1 file uploaded
+2021-07-23T01:09:12.3713151Z Total size of all the files uploaded is 5302694 bytes
+2021-07-23T01:09:12.4360096Z Finished uploading artifact fortress_darwin_amd64. Reported size is 5302694 bytes. There were 0 items that failed to upload
+2021-07-23T01:09:12.4361417Z Artifact fortress_darwin_amd64 has been successfully uploaded!
