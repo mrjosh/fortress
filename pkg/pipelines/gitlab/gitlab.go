@@ -8,14 +8,13 @@ import (
 
 	"github.com/mrjosh/fortress/cmds/flags"
 	"github.com/mrjosh/fortress/pkg/pipelines/sdk"
-	"github.com/xanzy/go-gitlab"
 	gitlabClient "github.com/xanzy/go-gitlab"
 )
 
 func GetPipelines(cfg *flags.JobsCommandFlags) ([]*sdk.Pipeline, error) {
 
 	gitBaseURL := fmt.Sprintf("https://%s/api/v4", cfg.BaseURL)
-	git, err := gitlabClient.NewClient(cfg.AccessToken, gitlab.WithBaseURL(gitBaseURL))
+	git, err := gitlabClient.NewClient(cfg.AccessToken, gitlabClient.WithBaseURL(gitBaseURL))
 	if err != nil {
 		log.Fatalf("Failed to create client: %v", err)
 	}
