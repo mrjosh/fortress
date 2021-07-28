@@ -1,0 +1,8 @@
+2021-07-23T01:09:18.8085594Z ##[section]Starting: Prepare job publish
+2021-07-23T01:09:18.8088898Z Evaluating strategy
+2021-07-23T01:09:18.8089097Z Creating job '__default'
+2021-07-23T01:09:18.8089382Z Evaluating timeout
+2021-07-23T01:09:18.8089422Z Evaluating cancel timeout
+2021-07-23T01:09:18.8089457Z Evaluating continue on error
+2021-07-23T01:09:18.8089496Z Evaluating target
+2021-07-23T01:09:18.8124850Z ##[section]Finishing: Prepare job publish

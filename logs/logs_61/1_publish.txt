@@ -1,0 +1,195 @@
+2021-07-23T01:09:19.3954714Z Found online and idle hosted runner(s) in the current repository's organization account that matches the required labels: 'ubuntu-20.04'
+2021-07-23T01:09:19.3954775Z Waiting for a hosted runner in 'organization' to pick this job...
+2021-07-23T01:09:26.7257253Z Current runner version: '2.278.0'
+2021-07-23T01:09:26.7298851Z ##[group]Operating System
+2021-07-23T01:09:26.7299913Z Ubuntu
+2021-07-23T01:09:26.7300615Z 20.04.2
+2021-07-23T01:09:26.7301266Z LTS
+2021-07-23T01:09:26.7301991Z ##[endgroup]
+2021-07-23T01:09:26.7302847Z ##[group]Virtual Environment
+2021-07-23T01:09:26.7304149Z Environment: ubuntu-20.04
+2021-07-23T01:09:26.7305252Z Version: 20210718.1
+2021-07-23T01:09:26.7306451Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20210718.1/images/linux/Ubuntu2004-README.md
+2021-07-23T01:09:26.7309152Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20210718.1
+2021-07-23T01:09:26.7310214Z ##[endgroup]
+2021-07-23T01:09:26.7311852Z ##[group]GITHUB_TOKEN Permissions
+2021-07-23T01:09:26.7313253Z Contents: write
+2021-07-23T01:09:26.7313909Z Metadata: read
+2021-07-23T01:09:26.7314615Z ##[endgroup]
+2021-07-23T01:09:26.7318395Z Prepare workflow directory
+2021-07-23T01:09:26.8248227Z Prepare all required actions
+2021-07-23T01:09:26.8263022Z Getting action download info
+2021-07-23T01:09:26.9914923Z Download action repository 'actions/download-artifact@v2'
+2021-07-23T01:09:28.9515034Z Download action repository 'meeDamian/github-release@2.0'
+2021-07-23T01:09:29.5708678Z ##[group]Build container for action use: '/home/runner/work/_actions/meeDamian/github-release/2.0/Dockerfile'.
+2021-07-23T01:09:29.5808159Z ##[command]/usr/bin/docker build -t 8a33c1:2809823bdb4b42e085660d987908369d -f "/home/runner/work/_actions/meeDamian/github-release/2.0/Dockerfile" "/home/runner/work/_actions/meeDamian/github-release/2.0"
+2021-07-23T01:09:29.8758619Z Sending build context to Docker daemon  26.11kB
+2021-07-23T01:09:29.8763495Z 
+2021-07-23T01:09:29.9335833Z Step 1/4 : FROM alpine:3.11
+2021-07-23T01:09:29.9338710Z  ---> e389ae589224
+2021-07-23T01:09:29.9341995Z Step 2/4 : RUN apk add --no-cache file curl jq
+2021-07-23T01:09:29.9714767Z  ---> Running in 88de81028ebf
+2021-07-23T01:09:30.4207891Z fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+2021-07-23T01:09:31.4499433Z fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.gz
+2021-07-23T01:09:31.4543464Z (1/8) Installing ca-certificates (20191127-r2)
+2021-07-23T01:09:31.4545493Z (2/8) Installing nghttp2-libs (1.40.0-r1)
+2021-07-23T01:09:31.4553265Z (3/8) Installing libcurl (7.67.0-r4)
+2021-07-23T01:09:31.5070768Z (4/8) Installing curl (7.67.0-r4)
+2021-07-23T01:09:31.5074501Z (5/8) Installing libmagic (5.37-r1)
+2021-07-23T01:09:31.5075948Z (6/8) Installing file (5.37-r1)
+2021-07-23T01:09:31.5079122Z (7/8) Installing oniguruma (6.9.4-r1)
+2021-07-23T01:09:31.5080516Z (8/8) Installing jq (1.6-r0)
+2021-07-23T01:09:31.5082762Z Executing busybox-1.31.1-r10.trigger
+2021-07-23T01:09:31.5085678Z Executing ca-certificates-20191127-r2.trigger
+2021-07-23T01:09:31.5087671Z OK: 14 MiB in 22 packages
+2021-07-23T01:09:32.0460898Z Removing intermediate container 88de81028ebf
+2021-07-23T01:09:32.0462827Z  ---> c2efa187a4fb
+2021-07-23T01:09:32.0464175Z Step 3/4 : COPY entrypoint.sh /
+2021-07-23T01:09:33.0138262Z  ---> 39d1122736f6
+2021-07-23T01:09:33.0139358Z Step 4/4 : ENTRYPOINT [ "/entrypoint.sh" ]
+2021-07-23T01:09:33.0381497Z  ---> Running in 181b9883e2c2
+2021-07-23T01:09:34.0240458Z Removing intermediate container 181b9883e2c2
+2021-07-23T01:09:34.0242688Z  ---> 442f982947bc
+2021-07-23T01:09:34.0246946Z Successfully built 442f982947bc
+2021-07-23T01:09:34.0328818Z Successfully tagged 8a33c1:2809823bdb4b42e085660d987908369d
+2021-07-23T01:09:34.0353664Z ##[endgroup]
+2021-07-23T01:09:34.0745731Z ##[group]Run actions/download-artifact@v2
+2021-07-23T01:09:34.0746677Z with:
+2021-07-23T01:09:34.0747478Z env:
+2021-07-23T01:09:34.0749490Z   GITHUB_TOKEN: ***
+2021-07-23T01:09:34.0750044Z ##[endgroup]
+2021-07-23T01:09:34.2669245Z No artifact name specified, downloading all artifacts
+2021-07-23T01:09:34.2670361Z Creating an extra directory for each artifact that is being downloaded
+2021-07-23T01:09:34.5509959Z Total number of files that will be downloaded: 1
+2021-07-23T01:09:35.2586158Z Total number of files that will be downloaded: 1
+2021-07-23T01:09:35.9764559Z Total number of files that will be downloaded: 1
+2021-07-23T01:09:36.6658291Z There were 3 artifacts downloaded
+2021-07-23T01:09:36.6686113Z Artifact fortress_darwin_amd64 was downloaded to /home/runner/work/fortress/fortress/fortress_darwin_amd64
+2021-07-23T01:09:36.6687960Z Artifact fortress_linux_amd64 was downloaded to /home/runner/work/fortress/fortress/fortress_linux_amd64
+2021-07-23T01:09:36.6689570Z Artifact fortress_windows_amd64 was downloaded to /home/runner/work/fortress/fortress/fortress_windows_amd64
+2021-07-23T01:09:36.6694992Z Artifact download has finished successfully
+2021-07-23T01:09:36.6895585Z ##[group]Run TAG_NAME=refs/heads/develop
+2021-07-23T01:09:36.6896304Z [36;1mTAG_NAME=refs/heads/develop[0m
+2021-07-23T01:09:36.6896911Z [36;1mecho "TAG_NAME=${TAG_NAME#refs/*/}" >> $GITHUB_ENV[0m
+2021-07-23T01:09:36.6953670Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:09:36.6954163Z ##[endgroup]
+2021-07-23T01:09:36.7088629Z ##[group]Run sha256sum fortress_linux_amd64/fortress_linux_amd64 > fortress_linux_amd64.sha256sum
+2021-07-23T01:09:36.7089747Z [36;1msha256sum fortress_linux_amd64/fortress_linux_amd64 > fortress_linux_amd64.sha256sum[0m
+2021-07-23T01:09:36.7090659Z [36;1mecho "SHA_LINUX_64=$(cat fortress_linux_amd64.sha256sum)" >> $GITHUB_ENV[0m
+2021-07-23T01:09:36.7145042Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:09:36.7145504Z env:
+2021-07-23T01:09:36.7145909Z   TAG_NAME: develop
+2021-07-23T01:09:36.7146353Z ##[endgroup]
+2021-07-23T01:09:36.8117126Z ##[group]Run sha256sum fortress_darwin_amd64/fortress_darwin_amd64 > fortress_darwin_amd64.sha256sum
+2021-07-23T01:09:36.8118573Z [36;1msha256sum fortress_darwin_amd64/fortress_darwin_amd64 > fortress_darwin_amd64.sha256sum[0m
+2021-07-23T01:09:36.8119522Z [36;1mecho "SHA_MACOS=$(cat fortress_darwin_amd64.sha256sum)" >> $GITHUB_ENV[0m
+2021-07-23T01:09:36.8166092Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:09:36.8166540Z env:
+2021-07-23T01:09:36.8166958Z   TAG_NAME: develop
+2021-07-23T01:09:36.8168234Z   SHA_LINUX_64: 5ba5632612bfb3ca70f626fd172023462afbd8872ecf80bca79efc9569b2a8d6  fortress_linux_amd64/fortress_linux_amd64
+2021-07-23T01:09:36.8169370Z ##[endgroup]
+2021-07-23T01:09:36.9238619Z ##[group]Run sha256sum fortress_windows_amd64/fortress_windows_amd64.exe > fortress_windows_amd64.sha256sum
+2021-07-23T01:09:36.9239816Z [36;1msha256sum fortress_windows_amd64/fortress_windows_amd64.exe > fortress_windows_amd64.sha256sum[0m
+2021-07-23T01:09:36.9240796Z [36;1mecho "SHA_WIN_64=$(cat fortress_windows_amd64.sha256sum)" >> $GITHUB_ENV[0m
+2021-07-23T01:09:36.9283726Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:09:36.9284158Z env:
+2021-07-23T01:09:36.9284574Z   TAG_NAME: develop
+2021-07-23T01:09:36.9285753Z   SHA_LINUX_64: 5ba5632612bfb3ca70f626fd172023462afbd8872ecf80bca79efc9569b2a8d6  fortress_linux_amd64/fortress_linux_amd64
+2021-07-23T01:09:36.9287541Z   SHA_MACOS: 646d9c5b9e73a4cd758f2d98f0b581b44991144e38102fc4e44b2380575cc7db  fortress_darwin_amd64/fortress_darwin_amd64
+2021-07-23T01:09:36.9288636Z ##[endgroup]
+2021-07-23T01:09:37.0182706Z ##[group]Run echo 'SUBJECT=Fortress development (prerelease) build' >> $GITHUB_ENV
+2021-07-23T01:09:37.0183744Z [36;1mecho 'SUBJECT=Fortress development (prerelease) build' >> $GITHUB_ENV[0m
+2021-07-23T01:09:37.0225430Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:09:37.0225855Z env:
+2021-07-23T01:09:37.0226271Z   TAG_NAME: develop
+2021-07-23T01:09:37.0227661Z   SHA_LINUX_64: 5ba5632612bfb3ca70f626fd172023462afbd8872ecf80bca79efc9569b2a8d6  fortress_linux_amd64/fortress_linux_amd64
+2021-07-23T01:09:37.0229494Z   SHA_MACOS: 646d9c5b9e73a4cd758f2d98f0b581b44991144e38102fc4e44b2380575cc7db  fortress_darwin_amd64/fortress_darwin_amd64
+2021-07-23T01:09:37.0231408Z   SHA_WIN_64: 2a1877cf6b1cbdca86e783b775fbfe9707767e2fdb8ba308a27c57606c864782  fortress_windows_amd64/fortress_windows_amd64.exe
+2021-07-23T01:09:37.0232626Z ##[endgroup]
+2021-07-23T01:09:37.0500798Z ##[group]Run meeDamian/github-release@2.0
+2021-07-23T01:09:37.0501553Z with:
+2021-07-23T01:09:37.0503088Z   token: ***
+2021-07-23T01:09:37.0503534Z   tag: develop
+2021-07-23T01:09:37.0504044Z   name: FORTRESS v0.0.1-dev
+2021-07-23T01:09:37.0504594Z   prerelease: true
+2021-07-23T01:09:37.0505360Z   commitish: 5f1df70c462d8ecd161e6663b9dc227f554cb4f9
+2021-07-23T01:09:37.0506091Z   gzip: false
+2021-07-23T01:09:37.0506563Z   allow_override: true
+2021-07-23T01:09:37.0509114Z   files: fortress_darwin_amd64:./fortress_darwin_amd64/fortress_darwin_amd64
+fortress_darwin_amd64.sha256sum:./fortress_darwin_amd64.sha256sum
+fortress_linux_amd64:./fortress_linux_amd64/fortress_linux_amd64
+fortress_linux_amd64.sha256sum:./fortress_linux_amd64.sha256sum
+fortress_windows_amd64.exe:./fortress_windows_amd64/fortress_windows_amd64.exe
+fortress_windows_amd64.exe.sha256sum:./fortress_windows_amd64.sha256sum
+
+2021-07-23T01:09:37.0514868Z   body: Fortress development (prerelease) build
+```
+FORTRESS v0.0.1-dev
+```
+
+### macOS (x64)
+1. Download **fortress_darwin_amd64**
+2. Run `./fortress_darwin_amd64`
+
+### Linux (x64)
+1. Download **fortress_linux_amd64**
+2. Run `./fortress_linux_amd64`
+
+### Windows (x64)
+1. Download **fortress_windows_amd64.exe**
+2. Run `./fortress_windows_amd64.exe`
+
+## SHA256 Checksums
+```
+5ba5632612bfb3ca70f626fd172023462afbd8872ecf80bca79efc9569b2a8d6  fortress_linux_amd64/fortress_linux_amd64
+646d9c5b9e73a4cd758f2d98f0b581b44991144e38102fc4e44b2380575cc7db  fortress_darwin_amd64/fortress_darwin_amd64
+2a1877cf6b1cbdca86e783b775fbfe9707767e2fdb8ba308a27c57606c864782  fortress_windows_amd64/fortress_windows_amd64.exe
+```
+
+2021-07-23T01:09:37.0518879Z env:
+2021-07-23T01:09:37.0519311Z   TAG_NAME: develop
+2021-07-23T01:09:37.0520571Z   SHA_LINUX_64: 5ba5632612bfb3ca70f626fd172023462afbd8872ecf80bca79efc9569b2a8d6  fortress_linux_amd64/fortress_linux_amd64
+2021-07-23T01:09:37.0522497Z   SHA_MACOS: 646d9c5b9e73a4cd758f2d98f0b581b44991144e38102fc4e44b2380575cc7db  fortress_darwin_amd64/fortress_darwin_amd64
+2021-07-23T01:09:37.0524904Z   SHA_WIN_64: 2a1877cf6b1cbdca86e783b775fbfe9707767e2fdb8ba308a27c57606c864782  fortress_windows_amd64/fortress_windows_amd64.exe
+2021-07-23T01:09:37.0526449Z   SUBJECT: Fortress development (prerelease) build
+2021-07-23T01:09:37.0527112Z ##[endgroup]
+2021-07-23T01:09:37.0583671Z ##[command]/usr/bin/docker run --name a33c12809823bdb4b42e085660d987908369d_e5d786 --label 8a33c1 --workdir /github/workspace --rm -e TAG_NAME -e SHA_LINUX_64 -e SHA_MACOS -e SHA_WIN_64 -e SUBJECT -e INPUT_TOKEN -e INPUT_TAG -e INPUT_NAME -e INPUT_PRERELEASE -e INPUT_COMMITISH -e INPUT_GZIP -e INPUT_ALLOW_OVERRIDE -e INPUT_FILES -e INPUT_BODY -e INPUT_DRAFT -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RETENTION_DAYS -e GITHUB_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e GITHUB_ACTION_REPOSITORY -e GITHUB_ACTION_REF -e GITHUB_PATH -e GITHUB_ENV -e RUNNER_OS -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/fortress/fortress":"/github/workspace" 8a33c1:2809823bdb4b42e085660d987908369d
+2021-07-23T01:09:37.8412823Z ##[group]Create Release
+2021-07-23T01:09:38.2802721Z ##[endgroup]
+2021-07-23T01:09:38.2803527Z ##[group]Upload Assets
+2021-07-23T01:09:38.3304156Z Files to be uploaded to Github:
+2021-07-23T01:09:38.3312323Z fortress_darwin_amd64
+2021-07-23T01:09:38.3314266Z fortress_darwin_amd64.sha256sum
+2021-07-23T01:09:38.3314956Z fortress_linux_amd64
+2021-07-23T01:09:38.3315848Z fortress_linux_amd64.sha256sum
+2021-07-23T01:09:38.3316612Z fortress_windows_amd64.exe
+2021-07-23T01:09:38.3317526Z fortress_windows_amd64.exe.sha256sum
+2021-07-23T01:09:38.8054109Z {
+2021-07-23T01:09:38.8054737Z   "message": "Not Found",
+2021-07-23T01:09:38.8056472Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:38.8057488Z }
+2021-07-23T01:09:40.0701622Z {
+2021-07-23T01:09:40.0702228Z   "message": "Not Found",
+2021-07-23T01:09:40.0703952Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:40.0704884Z }
+2021-07-23T01:09:40.9340518Z {
+2021-07-23T01:09:40.9341065Z   "message": "Not Found",
+2021-07-23T01:09:40.9342808Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:40.9343745Z }
+2021-07-23T01:09:42.2810698Z {
+2021-07-23T01:09:42.2811234Z   "message": "Not Found",
+2021-07-23T01:09:42.2813133Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:42.2814063Z }
+2021-07-23T01:09:43.1677808Z {
+2021-07-23T01:09:43.1678374Z   "message": "Not Found",
+2021-07-23T01:09:43.1680884Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:43.1681780Z }
+2021-07-23T01:09:45.6524041Z {
+2021-07-23T01:09:45.6524564Z   "message": "Not Found",
+2021-07-23T01:09:45.6526571Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:45.6527468Z }
+2021-07-23T01:09:46.1807546Z ##[endgroup]
+2021-07-23T01:09:46.1808280Z ##[group]Complete Release
+2021-07-23T01:09:46.6346725Z All done.
+2021-07-23T01:09:46.6348388Z ##[endgroup]
+2021-07-23T01:09:46.9459955Z Cleaning up orphan processes

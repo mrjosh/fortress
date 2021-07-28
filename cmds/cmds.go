@@ -25,6 +25,7 @@ func Run() error {
 	rootCmd.SetArgs(os.Args[1:])
 	rootCmd.AddCommand(newVersionCommand())
 	rootCmd.AddCommand(newJobsCommand())
+	rootCmd.AddCommand(newLogsCommand())
 
 	return rootCmd.Execute()
 }

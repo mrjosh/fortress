@@ -1,0 +1,32 @@
+2021-07-23T01:09:29.5708637Z ##[group]Build container for action use: '/home/runner/work/_actions/meeDamian/github-release/2.0/Dockerfile'.
+2021-07-23T01:09:29.5808112Z ##[command]/usr/bin/docker build -t 8a33c1:2809823bdb4b42e085660d987908369d -f "/home/runner/work/_actions/meeDamian/github-release/2.0/Dockerfile" "/home/runner/work/_actions/meeDamian/github-release/2.0"
+2021-07-23T01:09:29.8758508Z Sending build context to Docker daemon  26.11kB
+2021-07-23T01:09:29.8763453Z 
+2021-07-23T01:09:29.9335739Z Step 1/4 : FROM alpine:3.11
+2021-07-23T01:09:29.9338677Z  ---> e389ae589224
+2021-07-23T01:09:29.9341882Z Step 2/4 : RUN apk add --no-cache file curl jq
+2021-07-23T01:09:29.9714669Z  ---> Running in 88de81028ebf
+2021-07-23T01:09:30.4207706Z fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+2021-07-23T01:09:31.4499169Z fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.gz
+2021-07-23T01:09:31.4543331Z (1/8) Installing ca-certificates (20191127-r2)
+2021-07-23T01:09:31.4545053Z (2/8) Installing nghttp2-libs (1.40.0-r1)
+2021-07-23T01:09:31.4553133Z (3/8) Installing libcurl (7.67.0-r4)
+2021-07-23T01:09:31.5070582Z (4/8) Installing curl (7.67.0-r4)
+2021-07-23T01:09:31.5074438Z (5/8) Installing libmagic (5.37-r1)
+2021-07-23T01:09:31.5075893Z (6/8) Installing file (5.37-r1)
+2021-07-23T01:09:31.5079059Z (7/8) Installing oniguruma (6.9.4-r1)
+2021-07-23T01:09:31.5080467Z (8/8) Installing jq (1.6-r0)
+2021-07-23T01:09:31.5082699Z Executing busybox-1.31.1-r10.trigger
+2021-07-23T01:09:31.5084521Z Executing ca-certificates-20191127-r2.trigger
+2021-07-23T01:09:31.5087622Z OK: 14 MiB in 22 packages
+2021-07-23T01:09:32.0460713Z Removing intermediate container 88de81028ebf
+2021-07-23T01:09:32.0462807Z  ---> c2efa187a4fb
+2021-07-23T01:09:32.0464159Z Step 3/4 : COPY entrypoint.sh /
+2021-07-23T01:09:33.0138215Z  ---> 39d1122736f6
+2021-07-23T01:09:33.0139348Z Step 4/4 : ENTRYPOINT [ "/entrypoint.sh" ]
+2021-07-23T01:09:33.0381452Z  ---> Running in 181b9883e2c2
+2021-07-23T01:09:34.0240380Z Removing intermediate container 181b9883e2c2
+2021-07-23T01:09:34.0242660Z  ---> 442f982947bc
+2021-07-23T01:09:34.0246925Z Successfully built 442f982947bc
+2021-07-23T01:09:34.0328796Z Successfully tagged 8a33c1:2809823bdb4b42e085660d987908369d
+2021-07-23T01:09:34.0353518Z ##[endgroup]

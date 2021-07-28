@@ -1,0 +1,86 @@
+2021-07-23T01:09:37.0500775Z ##[group]Run meeDamian/github-release@2.0
+2021-07-23T01:09:37.0501544Z with:
+2021-07-23T01:09:37.0503077Z   token: ***
+2021-07-23T01:09:37.0503528Z   tag: develop
+2021-07-23T01:09:37.0504039Z   name: FORTRESS v0.0.1-dev
+2021-07-23T01:09:37.0504589Z   prerelease: true
+2021-07-23T01:09:37.0505354Z   commitish: 5f1df70c462d8ecd161e6663b9dc227f554cb4f9
+2021-07-23T01:09:37.0506086Z   gzip: false
+2021-07-23T01:09:37.0506558Z   allow_override: true
+2021-07-23T01:09:37.0509098Z   files: fortress_darwin_amd64:./fortress_darwin_amd64/fortress_darwin_amd64
+fortress_darwin_amd64.sha256sum:./fortress_darwin_amd64.sha256sum
+fortress_linux_amd64:./fortress_linux_amd64/fortress_linux_amd64
+fortress_linux_amd64.sha256sum:./fortress_linux_amd64.sha256sum
+fortress_windows_amd64.exe:./fortress_windows_amd64/fortress_windows_amd64.exe
+fortress_windows_amd64.exe.sha256sum:./fortress_windows_amd64.sha256sum
+
+2021-07-23T01:09:37.0514816Z   body: Fortress development (prerelease) build
+```
+FORTRESS v0.0.1-dev
+```
+
+### macOS (x64)
+1. Download **fortress_darwin_amd64**
+2. Run `./fortress_darwin_amd64`
+
+### Linux (x64)
+1. Download **fortress_linux_amd64**
+2. Run `./fortress_linux_amd64`
+
+### Windows (x64)
+1. Download **fortress_windows_amd64.exe**
+2. Run `./fortress_windows_amd64.exe`
+
+## SHA256 Checksums
+```
+5ba5632612bfb3ca70f626fd172023462afbd8872ecf80bca79efc9569b2a8d6  fortress_linux_amd64/fortress_linux_amd64
+646d9c5b9e73a4cd758f2d98f0b581b44991144e38102fc4e44b2380575cc7db  fortress_darwin_amd64/fortress_darwin_amd64
+2a1877cf6b1cbdca86e783b775fbfe9707767e2fdb8ba308a27c57606c864782  fortress_windows_amd64/fortress_windows_amd64.exe
+```
+
+2021-07-23T01:09:37.0518870Z env:
+2021-07-23T01:09:37.0519305Z   TAG_NAME: develop
+2021-07-23T01:09:37.0520565Z   SHA_LINUX_64: 5ba5632612bfb3ca70f626fd172023462afbd8872ecf80bca79efc9569b2a8d6  fortress_linux_amd64/fortress_linux_amd64
+2021-07-23T01:09:37.0522485Z   SHA_MACOS: 646d9c5b9e73a4cd758f2d98f0b581b44991144e38102fc4e44b2380575cc7db  fortress_darwin_amd64/fortress_darwin_amd64
+2021-07-23T01:09:37.0524893Z   SHA_WIN_64: 2a1877cf6b1cbdca86e783b775fbfe9707767e2fdb8ba308a27c57606c864782  fortress_windows_amd64/fortress_windows_amd64.exe
+2021-07-23T01:09:37.0526442Z   SUBJECT: Fortress development (prerelease) build
+2021-07-23T01:09:37.0527107Z ##[endgroup]
+2021-07-23T01:09:37.0583628Z ##[command]/usr/bin/docker run --name a33c12809823bdb4b42e085660d987908369d_e5d786 --label 8a33c1 --workdir /github/workspace --rm -e TAG_NAME -e SHA_LINUX_64 -e SHA_MACOS -e SHA_WIN_64 -e SUBJECT -e INPUT_TOKEN -e INPUT_TAG -e INPUT_NAME -e INPUT_PRERELEASE -e INPUT_COMMITISH -e INPUT_GZIP -e INPUT_ALLOW_OVERRIDE -e INPUT_FILES -e INPUT_BODY -e INPUT_DRAFT -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RETENTION_DAYS -e GITHUB_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e GITHUB_ACTION_REPOSITORY -e GITHUB_ACTION_REF -e GITHUB_PATH -e GITHUB_ENV -e RUNNER_OS -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/fortress/fortress":"/github/workspace" 8a33c1:2809823bdb4b42e085660d987908369d
+2021-07-23T01:09:37.8412782Z ##[group]Create Release
+2021-07-23T01:09:38.2802685Z ##[endgroup]
+2021-07-23T01:09:38.2803517Z ##[group]Upload Assets
+2021-07-23T01:09:38.3304117Z Files to be uploaded to Github:
+2021-07-23T01:09:38.3312303Z fortress_darwin_amd64
+2021-07-23T01:09:38.3314249Z fortress_darwin_amd64.sha256sum
+2021-07-23T01:09:38.3314948Z fortress_linux_amd64
+2021-07-23T01:09:38.3315586Z fortress_linux_amd64.sha256sum
+2021-07-23T01:09:38.3316604Z fortress_windows_amd64.exe
+2021-07-23T01:09:38.3317516Z fortress_windows_amd64.exe.sha256sum
+2021-07-23T01:09:38.8054063Z {
+2021-07-23T01:09:38.8054729Z   "message": "Not Found",
+2021-07-23T01:09:38.8056461Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:38.8057481Z }
+2021-07-23T01:09:40.0701578Z {
+2021-07-23T01:09:40.0702221Z   "message": "Not Found",
+2021-07-23T01:09:40.0703941Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:40.0704879Z }
+2021-07-23T01:09:40.9340476Z {
+2021-07-23T01:09:40.9341059Z   "message": "Not Found",
+2021-07-23T01:09:40.9342798Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:40.9343739Z }
+2021-07-23T01:09:42.2810661Z {
+2021-07-23T01:09:42.2811227Z   "message": "Not Found",
+2021-07-23T01:09:42.2813089Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:42.2814057Z }
+2021-07-23T01:09:43.1677767Z {
+2021-07-23T01:09:43.1678368Z   "message": "Not Found",
+2021-07-23T01:09:43.1680868Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:43.1681775Z }
+2021-07-23T01:09:45.6523995Z {
+2021-07-23T01:09:45.6524557Z   "message": "Not Found",
+2021-07-23T01:09:45.6526560Z   "documentation_url": "https://docs.github.com/rest/reference/repos#delete-a-release-asset"
+2021-07-23T01:09:45.6527463Z }
+2021-07-23T01:09:46.1807509Z ##[endgroup]
+2021-07-23T01:09:46.1808256Z ##[group]Complete Release
+2021-07-23T01:09:46.6346638Z All done.
+2021-07-23T01:09:46.6348374Z ##[endgroup]

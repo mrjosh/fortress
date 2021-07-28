@@ -1,0 +1,9 @@
+2021-07-23T01:09:37.0182681Z ##[group]Run echo 'SUBJECT=Fortress development (prerelease) build' >> $GITHUB_ENV
+2021-07-23T01:09:37.0183736Z [36;1mecho 'SUBJECT=Fortress development (prerelease) build' >> $GITHUB_ENV[0m
+2021-07-23T01:09:37.0225418Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:09:37.0225849Z env:
+2021-07-23T01:09:37.0226266Z   TAG_NAME: develop
+2021-07-23T01:09:37.0227652Z   SHA_LINUX_64: 5ba5632612bfb3ca70f626fd172023462afbd8872ecf80bca79efc9569b2a8d6  fortress_linux_amd64/fortress_linux_amd64
+2021-07-23T01:09:37.0229488Z   SHA_MACOS: 646d9c5b9e73a4cd758f2d98f0b581b44991144e38102fc4e44b2380575cc7db  fortress_darwin_amd64/fortress_darwin_amd64
+2021-07-23T01:09:37.0231382Z   SHA_WIN_64: 2a1877cf6b1cbdca86e783b775fbfe9707767e2fdb8ba308a27c57606c864782  fortress_windows_amd64/fortress_windows_amd64.exe
+2021-07-23T01:09:37.0232620Z ##[endgroup]

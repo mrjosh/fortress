@@ -1,0 +1,5 @@
+2021-07-23T01:09:36.6895561Z ##[group]Run TAG_NAME=refs/heads/develop
+2021-07-23T01:09:36.6896298Z [36;1mTAG_NAME=refs/heads/develop[0m
+2021-07-23T01:09:36.6896906Z [36;1mecho "TAG_NAME=${TAG_NAME#refs/*/}" >> $GITHUB_ENV[0m
+2021-07-23T01:09:36.6953649Z shell: /usr/bin/bash -e {0}
+2021-07-23T01:09:36.6954157Z ##[endgroup]

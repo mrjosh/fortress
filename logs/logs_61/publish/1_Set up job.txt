@@ -1,0 +1,21 @@
+2021-07-23T01:09:26.7256508Z Current runner version: '2.278.0'
+2021-07-23T01:09:26.7298807Z ##[group]Operating System
+2021-07-23T01:09:26.7299896Z Ubuntu
+2021-07-23T01:09:26.7300607Z 20.04.2
+2021-07-23T01:09:26.7301258Z LTS
+2021-07-23T01:09:26.7301822Z ##[endgroup]
+2021-07-23T01:09:26.7302837Z ##[group]Virtual Environment
+2021-07-23T01:09:26.7304140Z Environment: ubuntu-20.04
+2021-07-23T01:09:26.7305243Z Version: 20210718.1
+2021-07-23T01:09:26.7306441Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20210718.1/images/linux/Ubuntu2004-README.md
+2021-07-23T01:09:26.7309040Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20210718.1
+2021-07-23T01:09:26.7310203Z ##[endgroup]
+2021-07-23T01:09:26.7311836Z ##[group]GITHUB_TOKEN Permissions
+2021-07-23T01:09:26.7313230Z Contents: write
+2021-07-23T01:09:26.7313901Z Metadata: read
+2021-07-23T01:09:26.7314601Z ##[endgroup]
+2021-07-23T01:09:26.7318360Z Prepare workflow directory
+2021-07-23T01:09:26.8248073Z Prepare all required actions
+2021-07-23T01:09:26.8262980Z Getting action download info
+2021-07-23T01:09:26.9914875Z Download action repository 'actions/download-artifact@v2'
+2021-07-23T01:09:28.9514996Z Download action repository 'meeDamian/github-release@2.0'

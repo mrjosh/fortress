@@ -1,0 +1,16 @@
+2021-07-23T01:08:03.5689281Z ##[section]Starting: Prepare job goartifacts
+2021-07-23T01:08:03.5744457Z Evaluating strategy
+2021-07-23T01:08:03.5745113Z Creating job '_1_16_x_ubuntu-latest'
+2021-07-23T01:08:03.5745407Z Evaluating timeout
+2021-07-23T01:08:03.5745449Z Evaluating cancel timeout
+2021-07-23T01:08:03.5745485Z Evaluating continue on error
+2021-07-23T01:08:03.5745538Z Evaluating target
+2021-07-23T01:08:03.5745850Z Evaluating: matrix.os
+2021-07-23T01:08:03.5745908Z ##[debug]Evaluating Index:
+2021-07-23T01:08:03.5745950Z ##[debug]..Evaluating matrix:
+2021-07-23T01:08:03.5746004Z ##[debug]..=> Object
+2021-07-23T01:08:03.5746045Z ##[debug]..Evaluating String:
+2021-07-23T01:08:03.5746089Z ##[debug]..=> 'os'
+2021-07-23T01:08:03.5746131Z ##[debug]=> 'ubuntu-latest'
+2021-07-23T01:08:03.5746180Z Result: 'ubuntu-latest'
+2021-07-23T01:08:03.5801295Z ##[section]Finishing: Prepare job goartifacts

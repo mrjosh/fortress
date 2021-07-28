@@ -2,7 +2,6 @@ package config
 
 import (
 	"errors"
-	"fmt"
 	"io"
 	"os"
 
@@ -10,7 +9,7 @@ import (
 )
 
 type ConfMap struct {
-	Items map[string]*DomainConfig
+	Domains map[string]*DomainConfig
 }
 
 type DomainConfig struct {
@@ -19,17 +18,19 @@ type DomainConfig struct {
 
 func LoadFromReader(reader io.Reader) (*ConfMap, error) {
 	cfg := new(ConfMap)
-	if err := yaml.NewDecoder(reader).Decode(&cfg.Items); err != nil {
+	if err := yaml.NewDecoder(reader).Decode(&cfg.Domains); err != nil {
 		return nil, err
 	}
 	return cfg, nil
 }
 
-func Loadfile(filename string) (*ConfMap, error) {
+func LoadFile(filename string) (*ConfMap, error) {
 	f, err := os.Open(filename)
 	if err != nil {
 		if errors.Is(err, os.ErrNotExist) {
-			return &ConfMap{}, nil
+			return &ConfMap{
+				Domains: make(map[string]*DomainConfig),
+			}, nil
 		}
 		return nil, err
 	}
@@ -40,10 +41,7 @@ func Loadfile(filename string) (*ConfMap, error) {
 	return cfg, nil
 }
 
-func (cfg *ConfMap) GetConfigByDomain(domain string) (*DomainConfig, error) {
-	domainCfg, ok := cfg.Items[domain]
-	if ok {
-		return domainCfg, nil
-	}
-	return nil, fmt.Errorf("unknown server name [%s]", domain)
+func (cfg *ConfMap) GetGitDomainConfig(domain string) (*DomainConfig, bool) {
+	domainCfg, ok := cfg.Domains[domain]
+	return domainCfg, ok
 }
